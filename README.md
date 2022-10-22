@@ -27,3 +27,6 @@ yarn lint
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## TODO
+- [ ] Make it ready for finall deploy (importing assets, etc.)
