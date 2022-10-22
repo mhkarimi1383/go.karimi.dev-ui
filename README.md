@@ -1,5 +1,7 @@
 # docker-registry-ui
 
+brand new ui for docker.karimi.dev powered by VueJS and Ant Design
+
 ## Project setup
 
 ```
