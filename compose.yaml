@@ -1,0 +1,9 @@
+version: "3"
+services:
+  docker-registry-ui:
+    ports:
+      - "${LISTEN_HOST}:${LISTEN_PORT}:80"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
