@@ -27,7 +27,7 @@
             "
           >
             <template #cover>
-              <a-image :alt="reg.name + ' Logo'" :src="reg.logo" style="margin-top: 5%; min-height: 100%; min-width: 100%; object-fit: fill" />
+              <a-image :alt="reg.name + ' Logo'" :src="reg.logo" style="margin-top: 0; min-height: 100%; min-width: 100%; object-fit: fill" />
             </template>
             <template #actions>
               <a-tooltip title="Copy Pull Command">
@@ -68,7 +68,12 @@ export default defineComponent({
     },
   },
   data: function () {
-    const gcrImage = require("../assets/gcr.png")
+    const gcrLogo = require("../assets/gcr.png")
+    const mobyLogo = require("../assets/Moby-logo.png")
+    const kubernetesLogo = require("../assets/k8s-logo.png")
+    const quayLogo = require("../assets/RH_QuayIO.png")
+    const elasticLogo = require("../assets/es-logo.png")
+    const kubernetesGcrLogo = require("../assets/k8s-gcr.png")
     return {
       registries: [
         {
@@ -76,20 +81,20 @@ export default defineComponent({
           url: "docker.karimi.dev",
           description:
             "Use docker.karimi.dev as your registry, for official images (without username), use library as username",
-          logo: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png",
+          logo: mobyLogo,
           pullCommand: "docker pull docker.karimi.dev/library/nginx",
         },
         {
           name: "Kubernetes Registry",
           url: "docker.karimi.dev/registry.k8s.io",
           description: "Use docker.karimi.dev/registry.k8s.io as your registry",
-          logo: "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg",
+          logo: kubernetesLogo,
           pullCommand: "docker pull registry.k8s.io/debian-base-amd64:v1.0.1",
         },
         {
           name: "Quay",
           url: "docker.karimi.dev/quay.io",
-          logo: "https://quay.io/static/img/RH_QuayIO.svg",
+          logo: quayLogo,
           description: "Use docker.karimi.dev/quay.io as your registry",
           pullCommand:
             "docker pull docker.karimi.dev/quay.io/prometheus/node-exporter",
@@ -97,14 +102,14 @@ export default defineComponent({
         {
           name: "Google Container Registry",
           url: "docker.karimi.dev/gcr.io",
-          logo: gcrImage,
+          logo: gcrLogo,
           description: "Use docker.karimi.dev/gcr.io as your registry",
           pullCommand: "docker pull docker.karimi.dev/gcr.io/cadvisor/cadvisor",
         },
         {
           name: "ElasticSearch",
           url: "docker.karimi.dev/docker.elastic.co",
-          logo: "https://avatars.githubusercontent.com/u/6764390",
+          logo: elasticLogo,
           pullCommand:
             "docker pull docker.karimi.dev/docker.elastic.co/elasticsearch/elasticsearch",
           description:
@@ -113,7 +118,7 @@ export default defineComponent({
         {
           name: "Kubernetes Google Container Registry",
           url: "docker.karimi.dev/docker.elastic.co",
-          logo: "https://docker.karimi.dev/pic/k8s-gcr.png",
+          logo: kubernetesGcrLogo,
           pullCommand:
             "docker pull docker.karimi.dev/k8s.gcr.io/kube-apiserver:v1.25.1",
           description: "Use docker.karimi.dev/k8s.gcr.io as your registry",
