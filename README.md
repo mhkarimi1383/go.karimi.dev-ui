@@ -31,4 +31,4 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODO
-- [ ] Make it ready for finall deploy (importing assets, etc.)
+- [x] Make it ready for finall deploy (importing assets, etc.)
