@@ -1,28 +1,28 @@
 <template>
   <a-page-header
     style="border: 1px solid rgb(235, 237, 240)"
-    title="Docker Registry Mirror"
-    sub-title="--faster-docker"
+    title="Go Proxy"
+    sub-title="--faster-go"
   >
     <template #avatar>
       <a-avatar :size="{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }">
         <template #icon>
-          <font-awesome-icon icon="fa-brands fa-docker" />
+          <font-awesome-icon icon="fa-brands fa-golang" />
         </template>
       </a-avatar>
     </template>
   </a-page-header>
-  <RegistryCards />
+  <ProxyUsage />
 </template>
 
 <script>
-import RegistryCards from "./components/RegistryCards.vue";
+import ProxyUsage from "./components/ProxyUsage.vue";
 
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "App",
   components: {
-    RegistryCards,
+    ProxyUsage,
   },
   mounted() {
     document.documentElement.style.overflowX = "hidden";
